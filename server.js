@@ -9,4 +9,8 @@ const db = mongoose.connection
 db.on('error', (error) => console.error(error))
 db.once('error', () => console.log('Connected to Database'))
 
+app.use(express.json())
+
+const investorsRouter = require('./routes/investors')
+
 app.listen(3000, () => console.log('Server started'))
