@@ -18,3 +18,12 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3000/investors/66ad4ed2e5e84c0ac343df72
+
+###
+
+PATCH http://localhost:3000/investors/66ad61669aa0f6382ddb9a84
+Content-Type: application/json
+
+{
+   "name": "New Name" 
+}

@@ -31,8 +31,19 @@ router.post('/', async (req, res) => {
     }
 })
 // Updating one
-router.patch('/', (req, res) => {
-
+router.patch('/:id', getInvestor, async (req, res) => {
+    if (req.body.name != null) {
+        res.investor.name = req.body.name
+    }
+    if (req.body.investingToCompany != null) {
+        res.investor.investingToCompany = req.body.investingToCompany
+    }
+    try {
+        const updateInvestor = await res.investor.save()
+        res.json(updateInvestor)
+    } catch (err) {
+        res.status(400).json({message: err.message})
+    }
 })
 // Deleting one
 router.delete('/:id', getInvestor, async (req, res) => {
