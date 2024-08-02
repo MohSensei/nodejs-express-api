@@ -4,7 +4,7 @@ GET http://localhost:3000/investors
 ###
 
 
-GET http://localhost:3000/investors/15
+GET http://localhost:3000/investors/66ad54241a03126ee8a6165c
 
 
 ###
