@@ -15,3 +15,6 @@ Content-Type: application/json
     "name": "Person",
     "investingToCompany": "Lockheed Martin "
 }
+
+###
+DELETE http://localhost:3000/investors/66ad4ed2e5e84c0ac343df72

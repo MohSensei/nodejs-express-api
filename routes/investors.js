@@ -35,9 +35,16 @@ router.patch('/', (req, res) => {
 
 })
 // Deleting one
-router.delete('/:id', (req, res) => {
-
+router.delete('/:id', getInvestor, async (req, res) => {
+    try {
+        await res.investor.deleteOne()
+        res.json({message: 'Deleted Investor'})  
+    }   catch (err) {
+        res.status(500).json({message: err.message})
+    }
 })
+
+//deleteOne()
 
 async function getInvestor(req, res, next) {
     let investor;
