@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const Investor = require('../models/investor')
 
 // Getting all
 router.get('/', (req, res) => {
@@ -7,7 +8,7 @@ router.get('/', (req, res) => {
 })
 // Getting one
 router.get('/:id', (req, res) => {
-
+    res.send(req.params.id)
 })
 // Creating one
 router.post('/', (req, res) => {
