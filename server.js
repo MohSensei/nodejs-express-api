@@ -12,5 +12,6 @@ db.once('error', () => console.log('Connected to Database'))
 app.use(express.json())
 
 const investorsRouter = require('./routes/investors')
+app.use('/investors', investorsRouter)
 
 app.listen(3000, () => console.log('Server started'))
